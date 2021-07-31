@@ -1,0 +1,357 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+header, section, article, main, aside, nav, footer{
+    display: block;
+}
+header:after, section:after, article:after, main:after, aside:after, nav:after, footer:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+ul, ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+header{}
+header > div > div{
+    width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+header .top{
+    height: 40px;
+    background-color: #363636;
+    color: #ccc;
+    font-size: 14px;
+}
+header .top .left{
+    float: left;
+    line-height: 40px;
+}
+header .top .left p a{
+    color: #ccc;
+}
+header .top .left p a:hover{
+    color: #fff;
+}
+header .top .right{
+    float: right;
+}
+header .top .right ul{
+    font-size: 0;
+}
+header .top .right ul li{
+    display: inline-block;
+
+}
+header .top .right ul li a{
+    color: #ccc;
+    line-height: 40px;
+    border-right: 1px solid #eee;
+    padding: 0 10px;
+    font-size: 14px;
+}
+header .top .right ul li:hover a{
+    color: #fff;
+}
+header .top .right ul li:last-child a{
+    border: none;
+}
+header .main{
+    height: 80px;
+    background-color: #fff;
+    position: relative;
+}
+header .main .wrap{
+    height: 100%;
+}
+header .main .wrap .logo{
+    float: left;
+    height: 100%;
+}
+header .main .wrap .logo a{}
+header .main .wrap .logo a img{
+    display: block;
+    height: 67px;
+    padding-top: 6.5px;
+}
+header .main .wrap .menu{
+    float: right;
+}
+header .main .wrap .menu > ul{
+    font-size: 0;
+}
+header .main .wrap .menu > ul > li{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+}
+header .main .wrap .menu > ul > li > a{
+    display: block;
+    color: #363636;
+    font-size: 22px;
+    line-height: 80px;
+    font-weight: bold;
+    position: relative;
+}
+header .main .wrap .menu > ul > li > a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #004ea1;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+header .main .wrap .menu > ul > li:hover > a::before{
+    opacity: 1;
+}
+header .main .wrap .menu > ul > li:hover > a{
+    color: #004ea1;
+}
+header .main .wrap .menu > ul > li > ul{
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    left: 0;
+    transform: translateY(-500%);
+    opacity: 0;
+    transition: opacity 0.25s;
+    z-index: 1;
+}
+header .main .wrap .menu > ul > li:nth-child(1) > ul{
+    padding-left: 34%;
+}
+header .main .wrap .menu > ul > li:nth-child(2) > ul{
+    padding-left: 39%;
+}
+header .main .wrap .menu > ul > li:nth-child(3) > ul{
+    padding-left: 42%;
+}
+header .main .wrap .menu > ul > li:nth-child(4) > ul{
+    padding-left: 44%;
+}
+header .main .wrap .menu > ul > li:nth-child(5) > ul{
+    padding-left: 65%;
+}
+header .main .wrap .menu > ul > li:nth-child(6) > ul{
+    padding-left: 76%;
+}
+header .main .wrap .menu > ul > li:hover > ul{
+    transform: translateY(0%);
+    opacity: 1;
+    background: rgba(255,255,255,0.6);
+
+}
+header .main .wrap .menu > ul > li > ul > li{
+    display: inline-block;
+    height: 80px;
+}
+header .main .wrap .menu > ul > li > ul > li > a{
+    font-size: 15px;
+    margin: 0 10px;
+    line-height: 45px;
+    color: #777777;
+}
+header .main .wrap .menu > ul > li > ul > li > a:hover{
+    color: #004ea1;
+
+}
+
+
+main{}
+main .img{
+    height: 380px;
+    background-image: url(../img/main-02.jpg);
+    background-size: cover;
+    background-position: 50% 80%;
+    position: relative;
+    animation: 30s fadeImg infinite;
+}
+@keyframes fadeImg{
+    0%{background-image: url(../img/main-02.jpg);  background-position: 50% 85%;}
+    40%{background-image: url(../img/main-01.jpg);  background-position: 50% 0%;}
+    50%{background-image: url(../img/main-01.jpg);  background-position: 50% 0%;}
+    90%{background-image: url(../img/main-02.jpg);  background-position: 50% 85%;}
+    100%{background-image: url(../img/main-02.jpg);  background-position: 50% 85%;}
+}/*강사님 선언 참조*/
+
+main .img p{
+    font-size: 48px;
+    font-weight: bold;
+    color: #363636;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(+25%); /*x, y 동시에 적용이....*/
+    transform: translateY(-25%);
+    padding-left: 130px;
+}
+
+section#img_nav{
+    background: #d3dce5;
+}
+section#img_nav .wrap{
+    width: 1200px;
+    padding: 20px 10px;
+    margin: 0 auto;
+}
+section#img_nav .wrap ul{
+    font-size: 0;
+}
+section#img_nav .wrap ul li{
+    display: inline-block;
+    width: calc(100% / 12 - 20px);
+    margin: 0 10px;
+    height: 80px;
+    vertical-align: top;
+}
+section#img_nav .wrap ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: background-image 0.25s;
+}
+
+section#img_nav .wrap ul li:nth-child(1) a{
+    background-image: url(../img/quick_01_off.png);
+}
+section#img_nav .wrap ul li:nth-child(1):hover a{
+    background-image: url(../img/quick_01_on.png);
+}
+
+section#img_nav .wrap ul li:nth-child(2) a{
+    background-image: url(../img/quick_02_off.png);
+}
+section#img_nav .wrap ul li:nth-child(2):hover a{
+    background-image: url(../img/quick_02_on.png);
+}
+
+section#img_nav .wrap ul li:nth-child(3) a{
+    background-image: url(../img/quick_03_off.png)
+}
+section#img_nav .wrap ul li:nth-child(3):hover a{
+    background-image: url(../img/quick_03_on.png)
+}
+
+section#img_nav .wrap ul li:nth-child(4) a{
+    background-image: url(../img/quick_04_off.png)
+}
+section#img_nav .wrap ul li:nth-child(4):hover a{
+    background-image: url(../img/quick_04_on.png)
+}
+
+section#img_nav .wrap ul li:nth-child(5) a{
+    background-image: url(../img/quick_05_off.png)
+}
+section#img_nav .wrap ul li:nth-child(5):hover a{
+    background-image: url(../img/quick_05_on.png)
+}
+
+section#img_nav .wrap ul li:nth-child(6) a{
+    background-image: url(../img/quick_06_off.png)
+}
+section#img_nav .wrap ul li:nth-child(6):hover a{
+    background-image: url(../img/quick_06_on.png)
+}
+
+section#img_nav .wrap ul li:nth-child(7) a{
+    background-image: url(../img/quick_07_off.png)
+}
+section#img_nav .wrap ul li:nth-child(7):hover a{
+    background-image: url(../img/quick_07_on.png)
+}
+
+section#img_nav .wrap ul li:nth-child(8) a{
+    background-image: url(../img/quick_08_off.png)
+}
+section#img_nav .wrap ul li:nth-child(8):hover a{
+    background-image: url(../img/quick_08_on.png)
+}
+
+section#img_nav .wrap ul li:nth-child(9) a{
+    background-image: url(../img/quick_09_off.png)
+}
+section#img_nav .wrap ul li:nth-child(9):hover a{
+    background-image: url(../img/quick_09_on.png)
+}
+
+section#img_nav .wrap ul li:nth-child(10) a{
+    background-image: url(../img/quick_10_off.png)
+}
+section#img_nav .wrap ul li:nth-child(10):hover a{
+    background-image: url(../img/quick_10_on.png)
+}
+
+section#img_nav .wrap ul li:nth-child(11) a{
+    background-image: url(../img/quick_11_off.png)
+}
+section#img_nav .wrap ul li:nth-child(11):hover a{
+    background-image: url(../img/quick_11_on.png)
+}
+
+section#img_nav .wrap ul li:nth-child(12) a{
+    background-image: url(../img/quick_12_off.png)
+}
+section#img_nav .wrap ul li:nth-child(12):hover a{
+    background-image: url(../img/quick_12_on.png)
+}
+
+
+
+/* #img_nav{
+
+}
+#img_nav .wrap{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+#img_nav .wrap ul{
+    font-size: 0;
+}
+#img_nav .wrap ul li{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% / 12);
+    padding: 0 10px;
+    height: 80px;
+}
+#img_nav .wrap ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: background-image 0.25s;
+}
+#img_nav .wrap ul li:nth-child(2) a{
+    background-image: url(../img/quick_02_off.png);
+}
+#img_nav .wrap ul li:nth-child(2):hover a{
+    background-image: url(../img/quick_02_on.png);
+}
+#img_nav .wrap ul li a img{
+    width: 100%;
+} */
+
