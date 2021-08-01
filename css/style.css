@@ -194,7 +194,7 @@ main .img{
     100%{background-image: url(../img/main-02.jpg);  background-position: 50% 85%;}
 }/*강사님 선언 참조*/
 
-main .img p{
+main .img h2{
     font-size: 48px;
     font-weight: bold;
     color: #363636;
@@ -316,6 +316,45 @@ section#img_nav .wrap ul li:nth-child(12) a{
 section#img_nav .wrap ul li:nth-child(12):hover a{
     background-image: url(../img/quick_12_on.png)
 }
+
+
+/* #img_nav{
+
+}
+#img_nav .wrap{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+#img_nav .wrap ul{
+    font-size: 0;
+}
+#img_nav .wrap ul li{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% / 12);
+    padding: 0 10px;
+    height: 80px;
+}
+#img_nav .wrap ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: background-image 0.25s;
+}
+#img_nav .wrap ul li:nth-child(2) a{
+    background-image: url(../img/quick_02_off.png);
+}
+#img_nav .wrap ul li:nth-child(2):hover a{
+    background-image: url(../img/quick_02_on.png);
+}
+#img_nav .wrap ul li a img{
+    width: 100%;
+} */
+
+
 
 article#box_info{
     background-color: #efedef;
@@ -502,39 +541,54 @@ article#box_info .wrap .box:nth-child(4) .right button:hover{
     background-color: #e5e5e5;
 }
 
-/* #img_nav{
 
-}
-#img_nav .wrap{
-    width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-#img_nav .wrap ul{
-    font-size: 0;
-}
-#img_nav .wrap ul li{
-    display: inline-block;
-    vertical-align: top;
-    width: calc(100% / 12);
-    padding: 0 10px;
-    height: 80px;
-}
-#img_nav .wrap ul li a{
-    display: block;
-    width: 100%;
-    height: 100%;
+section.sub_main{
+    background-image: url(../img/health-care.jpg);
     background-size: cover;
     background-position: 50% 50%;
-    transition: background-image 0.25s;
+    height: 464px;
 }
-#img_nav .wrap ul li:nth-child(2) a{
-    background-image: url(../img/quick_02_off.png);
+section.sub_main .img{
+    width: 1200px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
 }
-#img_nav .wrap ul li:nth-child(2):hover a{
-    background-image: url(../img/quick_02_on.png);
+section.sub_main .img h2{
+    display: block;
+    text-align: center;
+    font-size: 36px;
+    position: absolute;
+    top: 164px;
+    right: 300px;
+    transform: translateX(50%);
 }
-#img_nav .wrap ul li a img{
-    width: 100%;
-} */
+section.sub_main .img .logo{
+    display: block;
+    position: absolute;
+    background-image: url(../img/logo.svg);
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 66px;
+    right: 300px;
+    bottom: 113px;
+    transform: translateX(50%);
+}
 
+section.health_info{
+    background-color: #fff;
+}
+section.health_info .wrap{
+    width: 1200px;
+    height: auto;
+    padding: 0 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+section.health_info .wrap .top{}
+section.health_info .wrap .top h4{
+    font-size: 36px;
+}
+section.health_info .wrap .top p{}
