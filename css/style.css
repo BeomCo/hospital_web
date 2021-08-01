@@ -775,7 +775,7 @@ footer .wrap .main .logo{
 footer .wrap .main .logo img{
     width: 100%;
     filter:  grayscale(100%) invert(100%);
-    /* filter:  brightness(0%) invert(100%); 로고 안쪽까지 흰색으로 변함*/
+    /* filter:  brightness(0%) invert(100%); 로고 안쪽까지 흰색으로 변함.*/
 }
 footer .wrap .main .copyright{
     font-size: 13px;
